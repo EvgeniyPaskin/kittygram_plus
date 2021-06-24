@@ -109,6 +109,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+kitty_venv
+kitty_venv/
+kittygram_plus_venv/
+kittygram_plus_venv
 
 # Spyder project settings
 .spyderproject
