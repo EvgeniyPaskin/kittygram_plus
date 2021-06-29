@@ -113,6 +113,8 @@ kitty_venv
 kitty_venv/
 kittygram_plus_venv/
 kittygram_plus_venv
+venv_kitty_plus
+venv_kitty_plus/
 
 # Spyder project settings
 .spyderproject
