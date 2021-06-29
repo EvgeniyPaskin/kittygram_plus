@@ -1,0 +1,27 @@
+#KittyGram API
+
+POST http://127.0.0.1:8000/auth/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user2",
+    "password": "!@#$%^&*"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/jwt/create HTTP/1.1
+content-type: application/json
+
+{
+    "username": "user2",
+    "password": "!@#$%^&*"
+}
+
+###
+
+GET http://127.0.0.1:8000/cats/ HTTP/1.1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI1MDQ5OTQyLCJqdGkiOiI2M2U0YWY5MDBhMzk0N2I5YmZjOWQ0YjU1Y2MyNTAzMCIsInVzZXJfaWQiOjJ9.o5kQoUSVJimbvnIgIcTNZ0b-wMvE6hjhgbYkVkEzt3w
+content-type: application/json
+
+

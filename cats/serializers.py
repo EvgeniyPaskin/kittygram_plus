@@ -3,6 +3,14 @@ from rest_framework import serializers
 from .models import Cat, Owner, Achievement, AchievementCat, CHOICES
 
 
+class CatListSerializer(serializers.ModelSerializer):
+    color = serializers.ChoiceField(choices=CHOICES)
+
+    class Meta:
+        model = Cat
+        fields = ('id', 'name', 'color')
+
+
 class AchievementSerializer(serializers.ModelSerializer):
     achievement_name = serializers.CharField(source='name')
 
@@ -12,7 +20,7 @@ class AchievementSerializer(serializers.ModelSerializer):
 
 
 class CatSerializer(serializers.ModelSerializer):
-    achievements = AchievementSerializer(many=True)
+    achievements = AchievementSerializer(many=True, required=False)
     age = serializers.SerializerMethodField()
     # Теперь поле примет только значение, упомянутое в списке CHOICES
     color = serializers.ChoiceField(choices=CHOICES)
